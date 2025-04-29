@@ -1,5 +1,7 @@
 @extends('admin.admin')
 
+@section('title', 'Liste des biens')
+
 @section('content')
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1>Les biens</h1>

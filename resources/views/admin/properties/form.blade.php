@@ -35,6 +35,7 @@
             @include('shared.input', ['class'=>'col', 'label' => 'Code postal', 'name' => 'postal_code', 'value' => $property->postal_code])
         </div>
 
+        @include('shared.select', ['name' => 'options', 'label' => 'Options',  'value' => $property->options()->pluck('id'), 'multiple' => true , 'options' => $options])
         @include('shared.checkbox', ['label' => 'Vendu', 'name' => 'sold', 'value' => $property->sold])
 
         <button type="submit" class="btn btn-primary w-100">@if ($property->exists)
