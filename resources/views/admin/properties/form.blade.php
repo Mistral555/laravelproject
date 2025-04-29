@@ -14,15 +14,15 @@
 
         <div class="row">
             
-            @include('shared.input', ['class'=>'col', 'label' => 'Titre', 'name' => 'titre', 'value' => $property->title])
+            @include('shared.input', ['class'=>'col', 'label' => 'Titre', 'name' => 'title', 'value' => $property->title])
 
             <div class="col row">
                 @include('shared.input', ['class'=>'col', 'name' => 'surface', 'value' => $property->surface])
-                @include('shared.input', ['class'=>'col', 'label' => 'Prix', 'name' => 'price', 'value' => $property->price, 'type' => 'number'])
+                @include('shared.input', ['class'=>'col', 'label' => 'Prix', 'name' => 'price', 'value' => $property->price])
             </div>
         </div>
 
-        @include('shared.input', ['type'=>'textarea', 'name' => 'description', 'value' => $property->price])
+        @include('shared.input', ['type'=>'textarea', 'name' => 'description', 'value' => $property->description])
 
         <div class="row">
             @include('shared.input', ['class'=>'col', 'label' => 'Pièces', 'name' => 'rooms', 'value' => $property->rooms])
@@ -30,10 +30,12 @@
             @include('shared.input', ['class'=>'col', 'label' => 'Etage', 'name' => 'floor', 'value' => $property->floor])
         </div>
         <div class="row">
-            @include('shared.input', ['class'=>'col', 'label' => 'Adresse', 'name' => 'address', 'value' => $property->address])
+            @include('shared.input', ['class'=>'col', 'label' => 'Adresse', 'name' => 'adress', 'value' => $property->adress])
             @include('shared.input', ['class'=>'col', 'label' => 'Ville', 'name' => 'city', 'value' => $property->city])
             @include('shared.input', ['class'=>'col', 'label' => 'Code postal', 'name' => 'postal_code', 'value' => $property->postal_code])
         </div>
+
+        @include('shared.checkbox', ['label' => 'Vendu', 'name' => 'sold', 'value' => $property->sold])
 
         <button type="submit" class="btn btn-primary w-100">@if ($property->exists)
                 Modifier
